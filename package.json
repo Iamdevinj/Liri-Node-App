@@ -1,0 +1,24 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "liri",
+  "main": "keys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iamdevinj/Liri-Node-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iamdevinj/Liri-Node-App/issues"
+  },
+  "homepage": "https://github.com/Iamdevinj/Liri-Node-App#readme",
+  "dependencies": {
+    "bandsintown": "^1.0.1",
+    "spotify": "^0.3.0",
+    "twitter": "^1.7.1"
+  }
+}
