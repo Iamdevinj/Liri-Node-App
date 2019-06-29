@@ -1,17 +1,14 @@
+require("dotenv").config();
 // require("dotenv").config();
 // links to keys page for all my api keys
 var keys = require("./keys.js");
 const util = require("util");
-// everything required for spotify to run
-// taken from the NPM website
+// everything required for spotify to runtaken from the NPM website
 var Spotify = require("node-spotify-api");
 // NPM 'REQUEST" FOR OMDB
 var request = require("request");
 
-var spotify = new Spotify({
-  id: "f996156fade64ed596ead2ebb559b6ea",
-  secret: "096694258cd54fa387f1f476d3418903"
-});
+var spotify = new Spotify(keys.spotify)
 
 var getArtistNames = function(artist) {
   return artist.name;
@@ -31,16 +28,17 @@ var getSpotify = function(songName) {
 
       var songs = data.tracks.items;
       for (var i = 0; i < songs.length; i++) {
-        //console.log('song', songs[i]);
-        // console.log(
-        //   "artist(s): " +
-        //     util.inspect(songs[i].artists, { showHidden: false, depth: 1 })
-        // );
+        // console.log('song', songs[i]);
+        //  console.log(
+        //    "artist(s): " +
+        //      util.inspect(songs[i].artists, { showHidden: false, depth: 1 })
+        //  );
+        console.log("*************************************************************************");
         console.log("song artist: " + songs[i].artists[0].name);
         console.log("song name: " + songs[i].name);
+        console.log('album: ' + songs[i].album.name);
         console.log("preview song: " + songs[i].preview_url);
-        //   console.log('album: ' = songs[i].album.name);
-        console.log("================================");
+        console.log("========================================================================");
       }
 
       //console.log(data.tracks.items[0]);
